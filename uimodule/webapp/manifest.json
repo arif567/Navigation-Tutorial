@@ -67,7 +67,11 @@
         "viewPath": "nav.test.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "clearControlAggregation": false,
+        "transition": "slide",
+        "bypassed": {
+          "target": "notFound"
+        }
       },
       "routes": [
         {
@@ -85,6 +89,11 @@
           "clearControlAggregation": false,
           "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "notFound": {
+          "viewType": "XML",
+          "viewId": "NotFound",
+          "viewName": "NotFound"
         }
       }
     },
