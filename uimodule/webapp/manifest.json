@@ -8,7 +8,7 @@
       "version": "0.0.1"
     },
     "dataSources": {
-      "employeeRemote":{
+      "employeeRemote": {
         "uri": "/here/goes/your/serviceUrl/",
         "type": "OData",
         "settings": {
@@ -61,11 +61,9 @@
           "bundleName": "nav.test.i18n.i18n"
         }
       },
-      "":{
+      "": {
         "dataSource": "employeeRemote"
       }
-
-
     },
     "resources": {
       "css": [
@@ -102,6 +100,13 @@
           "target": [
             "TargetEmployeeList"
           ]
+        },
+        {
+          "name": "EmployeeDetails",
+          "pattern": "RouteEmployeeDetails/{employeeId}",
+          "target": [
+            "TargetEmployeeDetails"
+          ]
         }
       ],
       "targets": {
@@ -121,6 +126,11 @@
           "viewType": "XML",
           "viewId": "EmployeeList",
           "viewName": "EmployeeList"
+        },
+        "TargetEmployeeDetails": {
+          "viewType": "XML",
+          "viewId": "EmployeeDetails",
+          "viewName": "EmployeeDetails"
         }
       }
     },
