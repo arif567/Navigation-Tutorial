@@ -8,8 +8,14 @@ sap.ui.define(
 
         return Controller.extend("nav.test.controller.MainView", {
             onInit: function () {
-                console.log("test");
+
             },
+
+		onNavToEmployees: function(oEvent) {
+
+            this.getRouter().navTo("EmployeeList");
+
+		},
         });
     },
 );

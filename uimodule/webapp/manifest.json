@@ -7,6 +7,16 @@
     "applicationVersion": {
       "version": "0.0.1"
     },
+    "dataSources": {
+      "employeeRemote":{
+        "uri": "/here/goes/your/serviceUrl/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
@@ -50,7 +60,12 @@
         "settings": {
           "bundleName": "nav.test.i18n.i18n"
         }
+      },
+      "":{
+        "dataSource": "employeeRemote"
       }
+
+
     },
     "resources": {
       "css": [
@@ -80,6 +95,13 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "EmployeeList",
+          "pattern": "RouteEmployeeList",
+          "target": [
+            "TargetEmployeeList"
+          ]
         }
       ],
       "targets": {
@@ -94,6 +116,11 @@
           "viewType": "XML",
           "viewId": "NotFound",
           "viewName": "NotFound"
+        },
+        "TargetEmployeeList": {
+          "viewType": "XML",
+          "viewId": "EmployeeList",
+          "viewName": "EmployeeList"
         }
       }
     },
