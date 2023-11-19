@@ -107,6 +107,13 @@
           "target": [
             "TargetEmployeeDetails"
           ]
+        },
+        {
+          "name": "Resume",
+          "pattern": "RouteResume/{employeeId}/resume:?query:",
+          "target": [
+            "TargetResume"
+          ]
         }
       ],
       "targets": {
@@ -131,6 +138,13 @@
           "viewType": "XML",
           "viewId": "EmployeeDetails",
           "viewName": "EmployeeDetails"
+        },
+        "TargetResume": {
+          "viewType": "XML",
+          "viewId": "Resume",
+          "viewName": "Resume",
+          "level": 4,
+          "transition": "flip"
         }
       }
     },

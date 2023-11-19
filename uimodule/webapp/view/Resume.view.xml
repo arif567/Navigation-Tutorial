@@ -1,0 +1,14 @@
+<mvc:View controllerName="nav.test.controller.Resume"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+		title="{i18n>ResumeOf} {FirstName} {LastName}"
+		id="employeeResumePage"
+		showNavButton="true"
+		navButtonPress=".onNavBack">
+        <content>
+
+    </content>
+    </Page>
+</mvc:View>

@@ -1,20 +1,11 @@
 sap.ui.define(["nav/test/controller/BaseController"], function (Controller) {
     "use strict";
 
-    return Controller.extend("nav.test.controller.EmployeeDetails", {
+    return Controller.extend("nav.test.controller.Resume", {
+
         onInit: function () {
 			var oRouter = this.getRouter();
-			oRouter.getRoute("EmployeeDetails").attachMatched(this._onRouteMatched, this);
-			// Hint: we don't want to do it this way
-			/*
-			oRouter.attachRouteMatched(function (oEvent){
-				var sRouteName, oArgs, oView;
-				sRouteName = oEvent.getParameter("name");
-				if (sRouteName === "employee"){
-					this._onRouteMatched(oEvent);
-				}
-			}, this);
-			*/
+			oRouter.getRoute("Resume").attachMatched(this._onRouteMatched, this);
 		},
 		_onRouteMatched : function (oEvent) {
 			var oArgs, oView;
@@ -39,13 +30,7 @@ sap.ui.define(["nav/test/controller/BaseController"], function (Controller) {
 			if (!this.getView().getBindingContext()) {
 				this.getRouter().getTargets().display("notFound");
 			}
-		},
-		onShowResume : function (oEvent) {
-			var oCtx = this.getView().getElementBinding().getBoundContext();
-
-			this.getRouter().navTo("Resume", {
-                employeeId: oCtx.getProperty("EmployeeID")
-            });
 		}
+
     });
 });
