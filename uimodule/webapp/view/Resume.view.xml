@@ -8,6 +8,33 @@
 		showNavButton="true"
 		navButtonPress=".onNavBack">
         <content>
+            <IconTabBar
+              id="IconTabBar"
+              headerBackgroundDesign="Translucent"
+              class="sapUiResponsiveContentPadding"
+              binding="{Resume}"
+              select=".onTabSelect"
+              selectedKey="{view>/selectedTabkey}">
+
+              <items>
+                <IconTabFilter id="infoTab" text="{i18n>tabInfo}" key="Info">
+                    <Text text="{Information}"/>
+                </IconTabFilter>
+                <IconTabFilter id="projectsTab" text="{i18n>tabProjects}" key="Projects">
+                    <Text text="{Projects}"/>
+
+                </IconTabFilter>
+                <IconTabFilter id="hobbiesTab" text="{i18n>tabHobbies}" key="Hobbies">
+                    <Text text="{Hobbies}"/>
+                </IconTabFilter>
+                <IconTabFilter id="notesTab" text="{i18n>tabNotes}" key="Notes">
+                    <Text text="{Notes}"/>
+                </IconTabFilter>
+            </items>
+
+
+            </IconTabBar>
+
 
     </content>
     </Page>
